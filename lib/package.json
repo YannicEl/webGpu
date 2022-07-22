@@ -1,0 +1,21 @@
+{
+	"name": "webgpu",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"/dist"
+	],
+	"scripts": {
+		"watch": "tsc --watch",
+		"build": "tsc"
+	},
+	"devDependencies": {
+		"@webgpu/types": "^0.1.21",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"gl-matrix": "^3.4.3"
+	}
+}

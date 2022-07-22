@@ -1,0 +1,12 @@
+#canvas {
+	width: 100vw;
+	height: 100vh;
+}
+
+#fps {
+	color: #75f914;
+	font-family: monospace;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
