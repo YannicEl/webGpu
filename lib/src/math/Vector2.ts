@@ -1,15 +1,7 @@
-export interface Vector2 extends Float32Array {
-	0: number;
-	1: number;
-	x: number;
-	y: number;
-	length: 2;
-	byteLength: 8;
-	byteOffset: 0;
-}
+import { Vector2 } from "../types.js";
 
 export const create = (x = 0, y = 0): Vector2 => {
-	const vec2 = new Float32Array([x, y]) as Vector2;
+	const vec2 = Float32Array.of(x, y) as Vector2;
 
 	Object.defineProperties(vec2, {
 		x: {

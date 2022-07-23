@@ -1,4 +1,4 @@
-import { Matrix4 } from './math/Matrix4.js';
+import { Matrix4 } from './types.js';
 
 export abstract class SceneNode {
 	constructor(

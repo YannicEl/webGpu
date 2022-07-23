@@ -1,19 +1,8 @@
 import { vec3 } from 'gl-matrix';
-
-export interface Vector3 extends Float32Array {
-	0: number;
-	1: number;
-	2: number;
-	x: number;
-	y: number;
-	z: number;
-	length: 3;
-	byteLength: 12;
-	byteOffset: 0;
-}
+import { Vector3 } from '../types.js';
 
 export const create = (x = 0, y = 0, z = 0): Vector3 => {
-	const vec3 = new Float32Array([x, y, z]) as Vector3;
+	const vec3 = Float32Array.of(x, y, z) as Vector3;
 
 	Object.defineProperties(vec3, {
 		x: {

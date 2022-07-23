@@ -1,15 +1,19 @@
 {
 	"compilerOptions": {
-    "lib": ["ESNext", "DOM"],
+		"lib": ["ESNext", "DOM"],
 		"module": "ESNext",
 		"moduleResolution": "NodeNext",
 		"target": "ESNext",
 
 		"strict": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+
 		"forceConsistentCasingInFileNames": true,
 		"allowSyntheticDefaultImports": true,
 
 		"declaration": true,
+		"declarationDir": "./dist/types",
 
 		"typeRoots": ["./node_modules/@webgpu/types", "./node_modules/@types"],
 

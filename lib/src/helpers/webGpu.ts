@@ -25,10 +25,11 @@ export const initWebGpu = async (
 	const device = await adapter.requestDevice();
 	if (!device) throw new Error('Error requesting WebGpu device');
 
-	const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
+	// const presentationFormat = navigator.gpu.getPreferredCanvasFormat();
 	ctx.configure({
 		device,
-		format: presentationFormat,
+		// format: presentationFormat,
+		format: 'rgba8unorm',
 		alphaMode: 'opaque',
 	});
 

@@ -1,6 +1,6 @@
 import { createAndMapBuffer, queueBufferWrite } from '../helpers/webGpu.js';
-import { Matrix4 } from '../index.js';
 import { SceneNode } from '../SceneNode.js';
+import { Matrix4 } from '../types.js';
 
 export class Triangle extends SceneNode {
 	private vertexBuffer: GPUBuffer;
@@ -23,7 +23,8 @@ export class Triangle extends SceneNode {
               @location(0) color : vec4<f32>,
             }
 
-            @vertex
+            // @vertex
+            @stage(vertex)
             fn main(
               @location(0) position : vec4<f32>,
               @location(1) color : vec4<f32>
@@ -59,9 +60,10 @@ export class Triangle extends SceneNode {
 			fragment: {
 				module: device.createShaderModule({
 					code: `
-            @fragment
+            // @fragment
+            @stage(fragment)
             fn main(
-              @location(0) color: vec4<f32>
+              @location(0) color: vec4<f32>,
             ) -> @location(0) vec4<f32> {
               return color;
             }
@@ -70,7 +72,8 @@ export class Triangle extends SceneNode {
 				entryPoint: 'main',
 				targets: [
 					{
-						format: navigator.gpu.getPreferredCanvasFormat(),
+						// format: navigator.gpu.getPreferredCanvasFormat(),
+						format: 'rgba8unorm',
 					},
 				],
 			},
