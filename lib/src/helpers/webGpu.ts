@@ -6,6 +6,7 @@ export const initWebGpu = async (
 	device: GPUDevice;
 }> => {
 	if (!navigator.gpu) throw new Error('WebGpu not supported');
+
 	const canvas =
 		typeof input === 'string'
 			? (document.getElementById('canvas') as HTMLCanvasElement)

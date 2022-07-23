@@ -1,4 +1,4 @@
-import { Mat4 } from './math/index.js';
+import { Matrix4 } from './math/Matrix4.js';
 
 export abstract class SceneNode {
 	constructor(
@@ -7,10 +7,10 @@ export abstract class SceneNode {
 	) {}
 
 	abstract update(...args: unknown[]): void;
-  
+
 	abstract render(
 		encoder: GPURenderPassEncoder,
-		projectionMatrix: Mat4.Mat4,
-		viewMatrix: Mat4.Mat4
+		projectionMatrix: Matrix4,
+		viewMatrix: Matrix4
 	): void;
 }

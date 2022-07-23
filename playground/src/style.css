@@ -4,9 +4,7 @@
 }
 
 #fps {
-	color: #75f914;
-	font-family: monospace;
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	left: 10px;
 }

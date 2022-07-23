@@ -1,12 +1,13 @@
 import 'virtual:windi.css';
-import { draw, initWebGpu, Scene, Triangle } from 'webgpu';
+import { createPerformacneMonitor, draw, initWebGpu, Scene, Triangle } from 'webgpu';
 import './style.css';
 
 (async () => {
-	const { ctx, device } = await initWebGpu('canvas');
-
 	const fpsElm = document.getElementById('fps');
 	if (!fpsElm) throw Error('Fps element not found');
+	const perf = createPerformacneMonitor(fpsElm);
+
+	const { ctx, device } = await initWebGpu('canvas');
 
 	const scene = new Scene(ctx, device);
 

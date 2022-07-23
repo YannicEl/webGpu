@@ -1,5 +1,5 @@
 import { createAndMapBuffer, queueBufferWrite } from '../helpers/webGpu.js';
-import { Mat4 } from '../math/index.js';
+import { Matrix4 } from '../index.js';
 import { SceneNode } from '../SceneNode.js';
 
 export class Triangle extends SceneNode {
@@ -131,8 +131,8 @@ export class Triangle extends SceneNode {
 
 	render(
 		encoder: GPURenderPassEncoder,
-		projectionMatrix: Mat4.Mat4,
-		viewMatrix: Mat4.Mat4
+		projectionMatrix: Matrix4,
+		viewMatrix: Matrix4
 	): void {
 		queueBufferWrite(this.device, this.viewMatrixBuffer, viewMatrix);
 		queueBufferWrite(this.device, this.projectionMatrixBuffer, projectionMatrix);
