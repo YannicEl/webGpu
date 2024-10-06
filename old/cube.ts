@@ -4,11 +4,11 @@ import './style.css';
 
 import { mat4, vec3 } from 'gl-matrix';
 import {
-  cubePositionOffset,
-  cubeUVOffset,
-  cubeVertexArray,
-  cubeVertexCount,
-  cubeVertexSize
+	cubePositionOffset,
+	cubeUVOffset,
+	cubeVertexArray,
+	cubeVertexCount,
+	cubeVertexSize,
 } from '../lib/meshes/cube';
 
 if (!navigator.gpu) throw new Error('WebGpu not supported');
@@ -189,12 +189,7 @@ const getTransformationMatrix = () => {
 	const viewMatrix = mat4.create();
 	mat4.translate(viewMatrix, viewMatrix, vec3.fromValues(0, 0, -4));
 	const now = Date.now() / 1000;
-	mat4.rotate(
-		viewMatrix,
-		viewMatrix,
-		1,
-		vec3.fromValues(Math.sin(now), Math.cos(now), 0)
-	);
+	mat4.rotate(viewMatrix, viewMatrix, 1, vec3.fromValues(Math.sin(now), Math.cos(now), 0));
 
 	const modelViewProjectionMatrix = mat4.create();
 	mat4.multiply(modelViewProjectionMatrix, projectionMatrix, viewMatrix);

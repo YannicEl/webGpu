@@ -7,9 +7,7 @@ export const initWebGpu = async (
 }> => {
 	if (!navigator.gpu) throw new Error('WebGpu not supported');
 	const canvas =
-		typeof input === 'string'
-			? (document.getElementById('canvas') as HTMLCanvasElement)
-			: input;
+		typeof input === 'string' ? (document.getElementById('canvas') as HTMLCanvasElement) : input;
 
 	if (!canvas) throw new Error('Canvas not found');
 	canvas.width = window.innerWidth;

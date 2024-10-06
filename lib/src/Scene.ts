@@ -5,7 +5,10 @@ export class Scene {
 	public children: SceneNode[] = [];
 	private camera: Camera;
 
-	constructor(private ctx: GPUCanvasContext, private device: GPUDevice) {
+	constructor(
+		private ctx: GPUCanvasContext,
+		private device: GPUDevice
+	) {
 		this.camera = new Camera();
 	}
 
@@ -30,9 +33,7 @@ export class Scene {
 
 		const { projectionMatrix, viewMatrix } = this.camera;
 
-		this.children.forEach((child) =>
-			child.render(passEncoder, projectionMatrix, viewMatrix)
-		);
+		this.children.forEach((child) => child.render(passEncoder, projectionMatrix, viewMatrix));
 		passEncoder.end();
 
 		this.device.queue.submit([commandEncoder.finish()]);

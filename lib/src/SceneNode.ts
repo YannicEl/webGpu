@@ -7,7 +7,7 @@ export abstract class SceneNode {
 	) {}
 
 	abstract update(...args: unknown[]): void;
-  
+
 	abstract render(
 		encoder: GPURenderPassEncoder,
 		projectionMatrix: Mat4.Mat4,

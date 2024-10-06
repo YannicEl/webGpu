@@ -129,11 +129,7 @@ export class Triangle extends SceneNode {
 		throw new Error('Method not implemented.');
 	}
 
-	render(
-		encoder: GPURenderPassEncoder,
-		projectionMatrix: Mat4.Mat4,
-		viewMatrix: Mat4.Mat4
-	): void {
+	render(encoder: GPURenderPassEncoder, projectionMatrix: Mat4.Mat4, viewMatrix: Mat4.Mat4): void {
 		queueBufferWrite(this.device, this.viewMatrixBuffer, viewMatrix);
 		queueBufferWrite(this.device, this.projectionMatrixBuffer, projectionMatrix);
 

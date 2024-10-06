@@ -1,18 +1,7 @@
 {
+	"extends": "@total-typescript/tsconfig/tsc/dom/library-monorepo",
 	"compilerOptions": {
-    "lib": ["ESNext", "DOM"],
-		"module": "ESNext",
-		"moduleResolution": "NodeNext",
-		"target": "ESNext",
-
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"allowSyntheticDefaultImports": true,
-
-		"declaration": true,
-
-		"typeRoots": ["./node_modules/@webgpu/types", "./node_modules/@types"],
-
+		"types": ["@webgpu/types"],
 		"outDir": "dist"
 	},
 	"include": ["./src"],

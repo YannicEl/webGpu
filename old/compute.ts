@@ -20,9 +20,7 @@ if (!adapter) throw new Error('Error requesting WebGpu adapter');
 const device = await adapter.requestDevice();
 if (!device) throw new Error('Error requesting WebGpu device');
 
-const firstMatrix = new Float32Array([
-	2 /* rows */, 4 /* columns */, 1, 2, 3, 4, 5, 6, 7, 8,
-]);
+const firstMatrix = new Float32Array([2 /* rows */, 4 /* columns */, 1, 2, 3, 4, 5, 6, 7, 8]);
 
 const gpuBufferFirstMatrix = device.createBuffer({
 	mappedAtCreation: true,
@@ -33,9 +31,7 @@ const arrayBufferFirstMatrix = gpuBufferFirstMatrix.getMappedRange();
 new Float32Array(arrayBufferFirstMatrix).set(firstMatrix);
 gpuBufferFirstMatrix.unmap();
 
-const secondMatrix = new Float32Array([
-	4 /* rows */, 2 /* columns */, 1, 2, 3, 4, 5, 6, 7, 8,
-]);
+const secondMatrix = new Float32Array([4 /* rows */, 2 /* columns */, 1, 2, 3, 4, 5, 6, 7, 8]);
 const gpuBufferSecondMatrix = device.createBuffer({
 	mappedAtCreation: true,
 	size: secondMatrix.byteLength,
