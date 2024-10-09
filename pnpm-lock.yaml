@@ -12,22 +12,22 @@ importers:
     specifiers:
       '@webgpu/types': ^0.1.21
       gl-matrix: ^3.4.3
-      typescript: ^4.8.2
+      typescript: ^5.6.3
     dependencies:
       gl-matrix: 3.4.3
     devDependencies:
       '@webgpu/types': 0.1.21
-      typescript: 4.8.2
+      typescript: 5.6.3
 
   playground:
     specifiers:
-      typescript: ^4.8.2
+      typescript: ^5.6.3
       vite: ^3.0.9
       vite-plugin-windicss: ^1.8.7
       webgpu: workspace:1.0.0
       windicss: ^3.5.6
     devDependencies:
-      typescript: 4.8.2
+      typescript: 5.6.3
       vite: 3.0.9
       vite-plugin-windicss: 1.8.7_vite@3.0.9
       webgpu: link:../lib
@@ -512,9 +512,9 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /typescript/4.8.2:
-    resolution: {integrity: sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: true
 
