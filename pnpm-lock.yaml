@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      prettier: ^2.7.1
+      prettier: ^3.9.6
     devDependencies:
-      prettier: 2.7.1
+      prettier: 3.9.6
 
   lib:
     specifiers:
@@ -453,9 +453,9 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
-    engines: {node: '>=10.13.0'}
+  /prettier/3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
